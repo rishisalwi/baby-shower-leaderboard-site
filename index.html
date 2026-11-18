@@ -116,6 +116,9 @@
   .round .hd { font-family: var(--font-display); font-weight: 600; }
   .round .hd small { color: var(--muted); font-weight: 500; margin-left: 6px; }
   .round .chips { margin-top: 6px; }
+  .answer { display: flex; align-items: center; gap: 8px; margin: 4px 0 2px; }
+  .answer .k { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; background: var(--butter); color: #8a6200; border-radius: 999px; padding: 1px 10px; }
+  .answer .v { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; }
 
   footer { text-align: center; padding: 6px 16px 34px; color: var(--muted); font-size: .9rem; }
   footer .row { display: flex; justify-content: center; align-items: flex-end; gap: 8px; margin-bottom: 4px; }
@@ -313,6 +316,11 @@
       const hd = el('div', 'hd', 'Round ' + r.id);
       hd.appendChild(el('small', '', r.date));
       row.appendChild(hd);
+      if (r.answer) {
+        const ans = el('div', 'answer');
+        ans.append(el('span', 'k', 'Answer'), el('span', 'v', r.answer));
+        row.appendChild(ans);
+      }
       if (r.status === 'open') row.appendChild(el('span', 'muted', 'In progress…'));
       else if (!r.winners.length) row.appendChild(el('span', 'muted', 'Nobody got this one!'));
       else row.appendChild(chips(r.winners));

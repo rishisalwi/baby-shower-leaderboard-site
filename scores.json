@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18 15:58",
+  "updated": "2026-11-18 16:46",
   "rounds_played": 19,
   "leaderboard": [
     {
@@ -345,7 +345,8 @@
         "Bala",
         "Neeta P.",
         "Sonali"
-      ]
+      ],
+      "answer": "Ruta K. & Shreya B."
     },
     {
       "id": 2,
@@ -354,13 +355,15 @@
       "winners": [
         "Dimple",
         "Sangeeta"
-      ]
+      ],
+      "answer": "Bala"
     },
     {
       "id": 3,
       "date": "Nov 10",
       "status": "closed",
-      "winners": []
+      "winners": [],
+      "answer": "Shraddha P."
     },
     {
       "id": 4,
@@ -368,7 +371,8 @@
       "status": "closed",
       "winners": [
         "Shilpa B."
-      ]
+      ],
+      "answer": "Sanika B."
     },
     {
       "id": 5,
@@ -376,7 +380,8 @@
       "status": "closed",
       "winners": [
         "Meena K."
-      ]
+      ],
+      "answer": "Hersh B."
     },
     {
       "id": 6,
@@ -384,7 +389,8 @@
       "status": "closed",
       "winners": [
         "Madhu S."
-      ]
+      ],
+      "answer": "Dimple"
     },
     {
       "id": 7,
@@ -397,7 +403,8 @@
         "Bala",
         "Shefali",
         "Sangeeta"
-      ]
+      ],
+      "answer": "Jai"
     },
     {
       "id": 8,
@@ -406,7 +413,8 @@
       "winners": [
         "Snehal B.",
         "Shilpa B."
-      ]
+      ],
+      "answer": "Seema K."
     },
     {
       "id": 9,
@@ -419,7 +427,8 @@
         "Dimple",
         "Seema K.",
         "Arpita"
-      ]
+      ],
+      "answer": "Vibha A."
     },
     {
       "id": 10,
@@ -435,7 +444,8 @@
         "Snehal B.",
         "Ruta K.",
         "Vaishali"
-      ]
+      ],
+      "answer": "Varsha K."
     },
     {
       "id": 11,
@@ -457,7 +467,8 @@
         "Hemant",
         "Meena K.",
         "Seema K."
-      ]
+      ],
+      "answer": "Gouri C."
     },
     {
       "id": 12,
@@ -474,7 +485,8 @@
         "Sangeeta",
         "Sonali",
         "Shefali"
-      ]
+      ],
+      "answer": "Arpita"
     },
     {
       "id": 13,
@@ -491,7 +503,8 @@
         "Rahul P.",
         "Gouri C.",
         "Snehal B."
-      ]
+      ],
+      "answer": "Radhika"
     },
     {
       "id": 14,
@@ -507,7 +520,8 @@
         "Raj S.",
         "Dimple",
         "Arpita"
-      ]
+      ],
+      "answer": "Sangeeta"
     },
     {
       "id": 15,
@@ -521,7 +535,8 @@
         "Shraddha P.",
         "Raj S.",
         "Seema K."
-      ]
+      ],
+      "answer": "Roopali G."
     },
     {
       "id": 16,
@@ -543,7 +558,8 @@
         "Dhanshri P.",
         "Raj S.",
         "Shobha"
-      ]
+      ],
+      "answer": "Medha G."
     },
     {
       "id": 17,
@@ -555,13 +571,15 @@
         "Madhu S.",
         "Anju",
         "Shefali"
-      ]
+      ],
+      "answer": "Anant T."
     },
     {
       "id": 18,
       "date": "Nov 17",
       "status": "closed",
-      "winners": []
+      "winners": [],
+      "answer": "Neeta P."
     },
     {
       "id": 19,
@@ -572,13 +590,15 @@
         "Vibha A.",
         "Madhu S.",
         "Anju"
-      ]
+      ],
+      "answer": "Nishit"
     },
     {
       "id": 20,
       "date": "Nov 18",
       "status": "open",
-      "winners": []
+      "winners": [],
+      "answer": null
     }
   ]
 }
