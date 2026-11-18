@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<title>Sanjana &amp; Pious's Baby Shower · Leaderboard</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%23bfe6f5'/><circle cx='46' cy='64' r='26' fill='white' stroke='%2324435c' stroke-width='5'/><circle cx='70' cy='30' r='15' fill='white' stroke='%2324435c' stroke-width='5'/><path d='M82 26 q16 0 14 8 q-8 4 -14 0z' fill='%23ff9a3c'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+  :root {
+    --sky: #e6f6ff;
+    --pond: #bfe6f5;
+    --pond-deep: #6fc3e3;
+    --butter: #fff4b8;
+    --beak: #ff9a3c;
+    --ink: #24435c;
+    --muted: #6b8499;
+    --card: #ffffff;
+    --line: #d9eef8;
+    --pink: #ffd3de;
+    --gold: #ffd84d;
+    --gold-deep: #e0a800;
+    --silver: #d3dde8;
+    --silver-deep: #8a9bb0;
+    --bronze: #f2b987;
+    --bronze-deep: #b8733a;
+    --shadow: 0 2px 4px rgba(36,67,92,.06), 0 10px 26px rgba(36,67,92,.09);
+    --r: 22px;
+    --font-display: "Fredoka", "Nunito", system-ui, sans-serif;
+    --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { overflow-x: hidden; }
+  body {
+    margin: 0; font-family: var(--font-body); color: var(--ink); line-height: 1.5;
+    background:
+      radial-gradient(60vw 45vh at 5% 0%, color-mix(in srgb, var(--butter) 80%, transparent), transparent 60%),
+      radial-gradient(55vw 50vh at 100% 100%, color-mix(in srgb, var(--pink) 70%, transparent), transparent 60%),
+      var(--sky);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- header: a little pond ---------- */
+  header {
+    position: relative; overflow: hidden; text-align: center; color: #fff;
+    padding: 30px 16px 104px;
+    background: linear-gradient(180deg, #8fd3ee 0%, var(--pond) 100%);
+  }
+  header h1 {
+    margin: 0; font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(1.8rem, 6.4vw, 2.7rem); line-height: 1.1; letter-spacing: -.01em;
+    text-shadow: 0 2px 0 rgba(36,67,92,.25);
+  }
+  header .amp { color: var(--butter); }
+  header .tag { margin: 8px 0 0; font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; }
+  .waves { position: absolute; left: 0; right: 0; bottom: -1px; height: 56px; width: 100%; display: block; }
+  .bubble { position: absolute; bottom: -20px; border-radius: 50%; background: rgba(255,255,255,.45); border: 1px solid rgba(255,255,255,.7); }
+  .swimmer { position: absolute; bottom: 38px; width: 74px; }
+  .swimmer.a { left: 6%; }
+  .swimmer.b { right: 7%; width: 62px; bottom: 44px; transform: scaleX(-1); }
+
+  main { max-width: 720px; margin: -30px auto 0; padding: 0 14px 40px; position: relative; display: grid; gap: 20px; grid-template-columns: minmax(0,1fr); }
+  .card { background: var(--card); border: 2px solid var(--line); border-radius: var(--r); padding: 18px 16px 20px; box-shadow: var(--shadow); }
+  .card h2 { margin: 0 0 12px; font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; }
+  .muted { color: var(--muted); font-size: .9rem; }
+  .meta { text-align: center; margin: 0; }
+  .pill { display: inline-block; background: #fff; color: var(--ink); border-radius: 999px; padding: 4px 14px; font-weight: 700; font-size: .85rem; box-shadow: var(--shadow); }
+
+  /* ---------- latest round ---------- */
+  .latest .when { font-family: var(--font-display); font-weight: 600; }
+  .latest .chips { margin-top: 8px; }
+  .big-note { font-size: .98rem; color: var(--muted); margin: 0 0 12px; }
+
+  /* ---------- places ---------- */
+  .search { width: 100%; padding: 11px 16px; border: 2px solid var(--line); border-radius: 999px; font: inherit; font-size: 1rem; color: var(--ink); background: #fbfeff; margin-bottom: 14px; }
+  .search:focus { outline: none; border-color: var(--pond-deep); box-shadow: 0 0 0 4px rgba(111,195,227,.25); }
+  .place { border-radius: 18px; padding: 12px 12px 14px; margin-bottom: 12px; background: #f4fbff; border: 2px solid var(--line); position: relative; }
+  .place-hd { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .badge {
+    flex: none; min-width: 58px; height: 46px; padding: 0 12px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; background: var(--pond); color: var(--ink);
+    box-shadow: inset 0 -4px 0 rgba(36,67,92,.12);
+  }
+  .place .info { flex: 1; min-width: 0; }
+  .place .ttl { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; line-height: 1.1; }
+  .place .sub { font-size: .82rem; color: var(--muted); font-weight: 700; }
+  .place .p { flex: none; font-family: var(--font-display); font-weight: 700; background: var(--butter); color: #8a6200; border-radius: 999px; padding: 3px 13px; font-size: .95rem; white-space: nowrap; }
+  .place.p1 { background: linear-gradient(180deg, #fff9d4, #fffdf0); border-color: #ffe27a; padding-top: 14px; }
+  .place.p1 .badge { background: linear-gradient(180deg, #ffe680, var(--gold)); color: #7a5600; box-shadow: inset 0 -4px 0 rgba(160,110,0,.25); height: 54px; min-width: 66px; font-size: 1.5rem; }
+  .place.p2 { background: #f6f9fc; }
+  .place.p2 .badge { background: linear-gradient(180deg, #e6edf4, var(--silver)); }
+  .place.p3 { background: #fff8f0; border-color: #f7e0cb; }
+  .place.p3 .badge { background: linear-gradient(180deg, #f9d2ae, var(--bronze)); color: #6b3d12; }
+  .place .goose-top { flex: none; width: 76px; margin: -22px 0 -6px; }
+  .p1-body { display: flex; align-items: flex-end; gap: 6px; }
+  .p1-body .chips { flex: 1; min-width: 0; padding-bottom: 2px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { background: #fff; border: 2px solid var(--line); border-radius: 999px; padding: 3px 13px; font-weight: 700; font-size: .95rem; transition: transform .15s ease, background .15s ease; }
+  .chip:hover { transform: translateY(-2px) rotate(-2deg); background: var(--butter); }
+  .chip.hit { background: var(--gold); border-color: var(--gold-deep); }
+  .place.p1 .chip { font-size: 1.1rem; padding: 4px 16px; border-color: #ffe27a; }
+  .none { text-align: center; padding: 14px 0 4px; }
+
+  /* ---------- rounds ---------- */
+  details summary { cursor: pointer; list-style: none; font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "▾"; margin-left: auto; color: var(--muted); transition: transform .2s; }
+  details[open] summary::after { transform: rotate(180deg); }
+  .round { padding: 10px 0; border-top: 2px dashed var(--line); font-size: .95rem; }
+  .round:first-of-type { border-top: 0; }
+  .round .hd { font-family: var(--font-display); font-weight: 600; }
+  .round .hd small { color: var(--muted); font-weight: 500; margin-left: 6px; }
+  .round .chips { margin-top: 6px; }
+
+  footer { text-align: center; padding: 6px 16px 34px; color: var(--muted); font-size: .9rem; }
+  footer .row { display: flex; justify-content: center; align-items: flex-end; gap: 8px; margin-bottom: 4px; }
+  footer .row svg { width: 52px; }
+
+  /* ---------- motion ---------- */
+  @media (prefers-reduced-motion: no-preference) {
+    .bob { animation: bob 3.2s ease-in-out infinite; transform-origin: 50% 85%; }
+    .bob.slow { animation-duration: 4.4s; animation-delay: -1.2s; }
+    @keyframes bob { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-6px) rotate(2deg); } }
+    .swimmer.b.bob { animation-name: bob-r; }
+    @keyframes bob-r { 0%,100% { transform: scaleX(-1) translateY(0) rotate(-2deg); } 50% { transform: scaleX(-1) translateY(-6px) rotate(2deg); } }
+    .bubble { animation: rise linear infinite; }
+    @keyframes rise { from { transform: translateY(0); opacity: .9; } to { transform: translateY(-190px); opacity: 0; } }
+    .waves .w1 { animation: drift 7s ease-in-out infinite alternate; }
+    .waves .w2 { animation: drift 9s ease-in-out infinite alternate-reverse; }
+    @keyframes drift { from { transform: translateX(-24px); } to { transform: translateX(24px); } }
+    main > .card { animation: fadeUp .4s ease both; }
+    main > .card:nth-child(3) { animation-delay: .08s; }
+    main > .card:nth-child(4) { animation-delay: .16s; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  }
+</style>
+</head>
+<body>
+
+<!-- A simple white goose, drawn once. Head centre (86,20); accessories sit relative to it. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="goose">
+      <path d="M20 60 L5 52 L22 74Z" fill="#fff" stroke="#24435c" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M40 88 h14 M62 88 h14" stroke="#ff9a3c" stroke-width="7" stroke-linecap="round"/>
+      <ellipse cx="54" cy="68" rx="37" ry="24" fill="#fff" stroke="#24435c" stroke-width="3.2"/>
+      <path d="M34 66 q18 -13 36 0 q-9 15 -28 10 q-7 -3 -8 -10z" fill="#eaf4fb" stroke="#24435c" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M74 56 C94 54 94 34 86 24" fill="none" stroke="#24435c" stroke-width="18" stroke-linecap="round"/>
+      <path d="M74 56 C94 54 94 34 86 24" fill="none" stroke="#fff" stroke-width="12.6" stroke-linecap="round"/>
+      <circle cx="86" cy="20" r="13.5" fill="#fff" stroke="#24435c" stroke-width="3.2"/>
+      <path d="M97 17 C109 15 113 19 111 23 C108 27 101 26 97 24Z" fill="#ff9a3c" stroke="#24435c" stroke-width="2.4" stroke-linejoin="round"/>
+      <circle cx="90" cy="16.5" r="3.4" fill="#24435c"/><circle cx="91.2" cy="15.3" r="1.1" fill="#fff"/>
+      <circle cx="85" cy="25.5" r="3.6" fill="#ff9aa8" opacity=".6"/>
+    </g>
+    <g id="crown">
+      <path d="M74 8 L75 -8 L80 -1 L86 -12 L92 -1 L97 -8 L98 8Z" fill="#ffd84d" stroke="#24435c" stroke-width="2.6" stroke-linejoin="round"/>
+    </g>
+    <g id="hat">
+      <path d="M76 8 L88 -20 L98 8Z" fill="#6fc3e3" stroke="#24435c" stroke-width="2.6" stroke-linejoin="round"/>
+      <circle cx="88" cy="-20" r="4" fill="#fff" stroke="#24435c" stroke-width="1.8"/>
+    </g>
+    <g id="bow">
+      <path d="M78 58 L64 49 L64 67Z M78 58 L92 49 L92 67Z" fill="#ff8fb1" stroke="#24435c" stroke-width="2.4" stroke-linejoin="round"/>
+      <circle cx="78" cy="58" r="4.4" fill="#ffd84d" stroke="#24435c" stroke-width="1.8"/>
+    </g>
+    <g id="bonnet">
+      <path d="M72 22 C70 0 90 -4 100 10 C92 6 84 8 78 24Z" fill="#fff4b8" stroke="#24435c" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M78 26 q3 8 10 10" fill="none" stroke="#ff8fb1" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </defs>
+</svg>
+
+<header id="top">
+  <h1>Sanjana <span class="amp">&amp;</span> Pious's<br>Baby Shower</h1>
+  <p class="tag">पहचान कौन? · Who's that baby?</p>
+  <svg class="swimmer a bob" viewBox="0 -26 124 126" aria-hidden="true"><use href="#goose"/><use href="#bow"/></svg>
+  <svg class="swimmer b bob slow" viewBox="0 -26 124 126" aria-hidden="true"><use href="#goose"/><use href="#hat"/></svg>
+  <svg class="waves" viewBox="0 0 400 56" preserveAspectRatio="none" aria-hidden="true">
+    <path class="w1" d="M-30 26 Q20 6 70 26 T170 26 T270 26 T370 26 T470 26 V60 H-30Z" fill="#e6f6ff" opacity=".55"/>
+    <path class="w2" d="M-30 34 Q20 16 70 34 T170 34 T270 34 T370 34 T470 34 V60 H-30Z" fill="#e6f6ff"/>
+  </svg>
+</header>
+
+<main>
+  <p class="meta"><span class="pill" id="meta">Loading…</span></p>
+  <section class="card latest" id="latest" hidden></section>
+  <section class="card" id="boardCard" hidden>
+    <h2>Leaderboard</h2>
+    <input class="search" id="search" type="search" placeholder="Find your name…" autocomplete="off" aria-label="Find your name">
+    <div id="tiers"></div>
+  </section>
+  <section class="card" id="roundsCard" hidden>
+    <details>
+      <summary>Every round so far</summary>
+      <div id="rounds" style="margin-top:10px"></div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="row">
+    <svg viewBox="0 -26 124 126" aria-hidden="true"><use href="#goose"/></svg>
+    <svg viewBox="0 -26 124 126" aria-hidden="true"><use href="#goose"/><use href="#bonnet"/></svg>
+    <svg viewBox="0 -26 124 126" aria-hidden="true"><use href="#goose"/><use href="#bow"/></svg>
+  </div>
+  Someone tiny is almost here · made with love for Sanjana &amp; Pious
+</footer>
+
+<script>
+(function () {
+  const SVG = 'http://www.w3.org/2000/svg';
+
+  function el(tag, cls, text) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function goose(extra, cls) {
+    const s = document.createElementNS(SVG, 'svg');
+    s.setAttribute('viewBox', '0 -26 124 126');
+    s.setAttribute('aria-hidden', 'true');
+    if (cls) s.setAttribute('class', cls);
+    ['goose'].concat(extra ? [extra] : []).forEach(id => {
+      const u = document.createElementNS(SVG, 'use');
+      u.setAttribute('href', '#' + id);
+      s.appendChild(u);
+    });
+    return s;
+  }
+  function chips(names, cls) {
+    const box = el('div', 'chips');
+    names.forEach(n => { const c = el('span', 'chip' + (cls ? ' ' + cls : ''), n); c.dataset.name = n.toLowerCase(); box.appendChild(c); });
+    return box;
+  }
+  function ordinal(n) {
+    const v = n % 100;
+    if (v >= 11 && v <= 13) return n + 'th';
+    return n + (['th', 'st', 'nd', 'rd'][n % 10] || 'th');
+  }
+  function bubbles() {
+    const top = document.getElementById('top');
+    for (let i = 0; i < 9; i++) {
+      const b = el('span', 'bubble');
+      const size = 6 + Math.random() * 12;
+      b.style.cssText = 'left:' + (Math.random() * 96) + '%;width:' + size + 'px;height:' + size + 'px;animation-duration:' + (5 + Math.random() * 6) + 's;animation-delay:-' + (Math.random() * 8) + 's';
+      top.appendChild(b);
+    }
+  }
+  const plural = (n, w) => n + ' ' + w + (n === 1 ? '' : 's');
+
+  function render(d) {
+    document.getElementById('meta').textContent =
+      plural(d.rounds_played, 'round') + ' played · updated ' + d.updated;
+
+    const closed = d.rounds.filter(r => r.status === 'closed');
+    const open = d.rounds.filter(r => r.status === 'open');
+    const latest = document.getElementById('latest');
+    if (open.length || closed.length) {
+      latest.appendChild(el('h2', '', open.length ? "Today's round is on!" : 'Latest round'));
+      if (open.length) {
+        latest.appendChild(el('p', 'big-note',
+          'Round ' + open[0].id + ' is open. Check the family chat for the picture and send in your guess before the reveal.'));
+      }
+      if (closed.length) {
+        const r = closed[closed.length - 1];
+        latest.appendChild(el('div', 'when', 'Round ' + r.id + ' · ' + r.date + ' · ' +
+          (r.winners.length ? plural(r.winners.length, 'winner') : 'no winners')));
+        latest.appendChild(r.winners.length ? chips(r.winners, 'hit') : el('p', 'big-note', 'This one stumped everyone!'));
+      }
+      latest.hidden = false;
+    }
+
+    // One block per distinct score: 1st = highest score, 2nd = next score down, and so on.
+    const tiers = [];
+    d.leaderboard.forEach(p => {
+      let t = tiers[tiers.length - 1];
+      if (!t || t.points !== p.points) { t = { points: p.points, names: [] }; tiers.push(t); }
+      t.names.push(p.name);
+    });
+    const box = document.getElementById('tiers');
+    tiers.forEach((t, i) => {
+      const place = i + 1;
+      const sec = el('div', 'place' + (place <= 3 ? ' p' + place : ''));
+      const hd = el('div', 'place-hd');
+      hd.appendChild(el('div', 'badge', ordinal(place)));
+      const info = el('div', 'info');
+      const tied = t.names.length > 1;
+      info.appendChild(el('div', 'ttl', place === 1 ? (tied ? 'Top guessers' : 'Top guesser') : ordinal(place) + ' place'));
+      info.appendChild(el('div', 'sub', tied ? t.names.length + ' players tied' : 'on their own'));
+      hd.appendChild(info);
+      hd.appendChild(el('div', 'p', t.points + (t.points === 1 ? ' pt' : ' pts')));
+      if (place === 1) {
+        const body = el('div', 'p1-body');
+        body.append(chips(t.names), goose('crown', 'goose-top bob'));
+        sec.append(hd, body);
+      } else {
+        sec.append(hd, chips(t.names));
+      }
+      box.appendChild(sec);
+    });
+    if (!tiers.length) box.appendChild(el('p', 'none muted', 'No points yet. Waiting for the first guess!'));
+    document.getElementById('boardCard').hidden = false;
+
+    const rounds = document.getElementById('rounds');
+    d.rounds.slice().reverse().forEach(r => {
+      const row = el('div', 'round');
+      const hd = el('div', 'hd', 'Round ' + r.id);
+      hd.appendChild(el('small', '', r.date));
+      row.appendChild(hd);
+      if (r.status === 'open') row.appendChild(el('span', 'muted', 'In progress…'));
+      else if (!r.winners.length) row.appendChild(el('span', 'muted', 'Nobody got this one!'));
+      else row.appendChild(chips(r.winners));
+      rounds.appendChild(row);
+    });
+    document.getElementById('roundsCard').hidden = false;
+
+    document.getElementById('search').addEventListener('input', e => {
+      const q = e.target.value.trim().toLowerCase();
+      box.querySelectorAll('.place').forEach(sec => {
+        let any = false;
+        sec.querySelectorAll('.chip').forEach(c => {
+          const hit = q && c.dataset.name.includes(q);
+          c.classList.toggle('hit', !!hit);
+          if (hit) any = true;
+        });
+        sec.style.display = (!q || any) ? '' : 'none';
+      });
+    });
+  }
+
+  bubbles();
+  fetch('scores.json', { cache: 'no-store' })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(render)
+    .catch(() => { document.getElementById('meta').textContent = "Couldn't load the scores. Try again soon!"; });
+})();
+</script>
+</body>
+</html>

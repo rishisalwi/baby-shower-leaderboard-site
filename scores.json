@@ -1,0 +1,584 @@
+{
+  "updated": "2026-11-18 15:58",
+  "rounds_played": 19,
+  "leaderboard": [
+    {
+      "name": "Sangeeta",
+      "points": 7,
+      "rounds_won": [
+        1,
+        2,
+        7,
+        9,
+        10,
+        12,
+        19
+      ],
+      "rank": 1
+    },
+    {
+      "name": "Dimple",
+      "points": 6,
+      "rounds_won": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        17
+      ],
+      "rank": 2
+    },
+    {
+      "name": "Madhu S.",
+      "points": 6,
+      "rounds_won": [
+        6,
+        9,
+        12,
+        14,
+        17,
+        19
+      ],
+      "rank": 2
+    },
+    {
+      "name": "Ruta K.",
+      "points": 6,
+      "rounds_won": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        16
+      ],
+      "rank": 2
+    },
+    {
+      "name": "Seema K.",
+      "points": 6,
+      "rounds_won": [
+        1,
+        9,
+        11,
+        14,
+        15,
+        16
+      ],
+      "rank": 2
+    },
+    {
+      "name": "Shilpa B.",
+      "points": 6,
+      "rounds_won": [
+        4,
+        8,
+        11,
+        13,
+        15,
+        16
+      ],
+      "rank": 2
+    },
+    {
+      "name": "Snehal B.",
+      "points": 6,
+      "rounds_won": [
+        8,
+        10,
+        11,
+        13,
+        15,
+        16
+      ],
+      "rank": 2
+    },
+    {
+      "name": "Meena K.",
+      "points": 5,
+      "rounds_won": [
+        5,
+        7,
+        10,
+        11,
+        16
+      ],
+      "rank": 8
+    },
+    {
+      "name": "Raj S.",
+      "points": 5,
+      "rounds_won": [
+        11,
+        12,
+        14,
+        15,
+        16
+      ],
+      "rank": 8
+    },
+    {
+      "name": "Shraddha P.",
+      "points": 5,
+      "rounds_won": [
+        10,
+        11,
+        13,
+        15,
+        16
+      ],
+      "rank": 8
+    },
+    {
+      "name": "Sonali",
+      "points": 5,
+      "rounds_won": [
+        1,
+        9,
+        12,
+        13,
+        14
+      ],
+      "rank": 8
+    },
+    {
+      "name": "Vaishali",
+      "points": 5,
+      "rounds_won": [
+        10,
+        11,
+        13,
+        15,
+        16
+      ],
+      "rank": 8
+    },
+    {
+      "name": "Anju",
+      "points": 4,
+      "rounds_won": [
+        12,
+        14,
+        17,
+        19
+      ],
+      "rank": 13
+    },
+    {
+      "name": "Bala",
+      "points": 4,
+      "rounds_won": [
+        1,
+        7,
+        12,
+        14
+      ],
+      "rank": 13
+    },
+    {
+      "name": "Deo",
+      "points": 3,
+      "rounds_won": [
+        11,
+        15,
+        16
+      ],
+      "rank": 15
+    },
+    {
+      "name": "Hemant",
+      "points": 3,
+      "rounds_won": [
+        11,
+        13,
+        16
+      ],
+      "rank": 15
+    },
+    {
+      "name": "Medha G.",
+      "points": 3,
+      "rounds_won": [
+        1,
+        10,
+        11
+      ],
+      "rank": 15
+    },
+    {
+      "name": "Shefali",
+      "points": 3,
+      "rounds_won": [
+        7,
+        12,
+        17
+      ],
+      "rank": 15
+    },
+    {
+      "name": "Varsha K.",
+      "points": 3,
+      "rounds_won": [
+        1,
+        11,
+        16
+      ],
+      "rank": 15
+    },
+    {
+      "name": "Vibha A.",
+      "points": 3,
+      "rounds_won": [
+        7,
+        17,
+        19
+      ],
+      "rank": 15
+    },
+    {
+      "name": "Arpita",
+      "points": 2,
+      "rounds_won": [
+        9,
+        14
+      ],
+      "rank": 21
+    },
+    {
+      "name": "Dhanshri P.",
+      "points": 2,
+      "rounds_won": [
+        11,
+        16
+      ],
+      "rank": 21
+    },
+    {
+      "name": "Neeta D.",
+      "points": 2,
+      "rounds_won": [
+        11,
+        13
+      ],
+      "rank": 21
+    },
+    {
+      "name": "Roopali G.",
+      "points": 2,
+      "rounds_won": [
+        1,
+        16
+      ],
+      "rank": 21
+    },
+    {
+      "name": "Shobha",
+      "points": 2,
+      "rounds_won": [
+        10,
+        16
+      ],
+      "rank": 21
+    },
+    {
+      "name": "Shubhangi",
+      "points": 2,
+      "rounds_won": [
+        11,
+        16
+      ],
+      "rank": 21
+    },
+    {
+      "name": "Gouri C.",
+      "points": 1,
+      "rounds_won": [
+        13
+      ],
+      "rank": 27
+    },
+    {
+      "name": "Neeta P.",
+      "points": 1,
+      "rounds_won": [
+        1
+      ],
+      "rank": 27
+    },
+    {
+      "name": "Rahul P.",
+      "points": 1,
+      "rounds_won": [
+        13
+      ],
+      "rank": 27
+    },
+    {
+      "name": "Sanjeev",
+      "points": 1,
+      "rounds_won": [
+        12
+      ],
+      "rank": 27
+    },
+    {
+      "name": "Shreya B.",
+      "points": 1,
+      "rounds_won": [
+        10
+      ],
+      "rank": 27
+    }
+  ],
+  "rounds": [
+    {
+      "id": 1,
+      "date": "Nov 9",
+      "status": "closed",
+      "winners": [
+        "Seema K.",
+        "Medha G.",
+        "Roopali G.",
+        "Varsha K.",
+        "Sangeeta",
+        "Bala",
+        "Neeta P.",
+        "Sonali"
+      ]
+    },
+    {
+      "id": 2,
+      "date": "Nov 10",
+      "status": "closed",
+      "winners": [
+        "Dimple",
+        "Sangeeta"
+      ]
+    },
+    {
+      "id": 3,
+      "date": "Nov 10",
+      "status": "closed",
+      "winners": []
+    },
+    {
+      "id": 4,
+      "date": "Nov 11",
+      "status": "closed",
+      "winners": [
+        "Shilpa B."
+      ]
+    },
+    {
+      "id": 5,
+      "date": "Nov 11",
+      "status": "closed",
+      "winners": [
+        "Meena K."
+      ]
+    },
+    {
+      "id": 6,
+      "date": "Nov 11",
+      "status": "closed",
+      "winners": [
+        "Madhu S."
+      ]
+    },
+    {
+      "id": 7,
+      "date": "Nov 12",
+      "status": "closed",
+      "winners": [
+        "Meena K.",
+        "Vibha A.",
+        "Dimple",
+        "Bala",
+        "Shefali",
+        "Sangeeta"
+      ]
+    },
+    {
+      "id": 8,
+      "date": "Nov 12",
+      "status": "closed",
+      "winners": [
+        "Snehal B.",
+        "Shilpa B."
+      ]
+    },
+    {
+      "id": 9,
+      "date": "Nov 13",
+      "status": "closed",
+      "winners": [
+        "Sonali",
+        "Madhu S.",
+        "Sangeeta",
+        "Dimple",
+        "Seema K.",
+        "Arpita"
+      ]
+    },
+    {
+      "id": 10,
+      "date": "Nov 13",
+      "status": "closed",
+      "winners": [
+        "Meena K.",
+        "Sangeeta",
+        "Shreya B.",
+        "Medha G.",
+        "Shraddha P.",
+        "Shobha",
+        "Snehal B.",
+        "Ruta K.",
+        "Vaishali"
+      ]
+    },
+    {
+      "id": 11,
+      "date": "Nov 14",
+      "status": "closed",
+      "winners": [
+        "Shilpa B.",
+        "Ruta K.",
+        "Neeta D.",
+        "Snehal B.",
+        "Shubhangi",
+        "Vaishali",
+        "Raj S.",
+        "Shraddha P.",
+        "Medha G.",
+        "Varsha K.",
+        "Deo",
+        "Dhanshri P.",
+        "Hemant",
+        "Meena K.",
+        "Seema K."
+      ]
+    },
+    {
+      "id": 12,
+      "date": "Nov 14",
+      "status": "closed",
+      "winners": [
+        "Madhu S.",
+        "Ruta K.",
+        "Anju",
+        "Bala",
+        "Dimple",
+        "Raj S.",
+        "Sanjeev",
+        "Sangeeta",
+        "Sonali",
+        "Shefali"
+      ]
+    },
+    {
+      "id": 13,
+      "date": "Nov 14",
+      "status": "closed",
+      "winners": [
+        "Sonali",
+        "Neeta D.",
+        "Shilpa B.",
+        "Vaishali",
+        "Ruta K.",
+        "Shraddha P.",
+        "Hemant",
+        "Rahul P.",
+        "Gouri C.",
+        "Snehal B."
+      ]
+    },
+    {
+      "id": 14,
+      "date": "Nov 15",
+      "status": "closed",
+      "winners": [
+        "Madhu S.",
+        "Ruta K.",
+        "Sonali",
+        "Bala",
+        "Seema K.",
+        "Anju",
+        "Raj S.",
+        "Dimple",
+        "Arpita"
+      ]
+    },
+    {
+      "id": 15,
+      "date": "Nov 15",
+      "status": "closed",
+      "winners": [
+        "Shilpa B.",
+        "Snehal B.",
+        "Vaishali",
+        "Deo",
+        "Shraddha P.",
+        "Raj S.",
+        "Seema K."
+      ]
+    },
+    {
+      "id": 16,
+      "date": "Nov 16",
+      "status": "closed",
+      "winners": [
+        "Shilpa B.",
+        "Snehal B.",
+        "Shraddha P.",
+        "Seema K.",
+        "Deo",
+        "Shubhangi",
+        "Vaishali",
+        "Roopali G.",
+        "Ruta K.",
+        "Varsha K.",
+        "Hemant",
+        "Meena K.",
+        "Dhanshri P.",
+        "Raj S.",
+        "Shobha"
+      ]
+    },
+    {
+      "id": 17,
+      "date": "Nov 16",
+      "status": "closed",
+      "winners": [
+        "Vibha A.",
+        "Dimple",
+        "Madhu S.",
+        "Anju",
+        "Shefali"
+      ]
+    },
+    {
+      "id": 18,
+      "date": "Nov 17",
+      "status": "closed",
+      "winners": []
+    },
+    {
+      "id": 19,
+      "date": "Nov 17",
+      "status": "closed",
+      "winners": [
+        "Sangeeta",
+        "Vibha A.",
+        "Madhu S.",
+        "Anju"
+      ]
+    },
+    {
+      "id": 20,
+      "date": "Nov 18",
+      "status": "open",
+      "winners": []
+    }
+  ]
+}
