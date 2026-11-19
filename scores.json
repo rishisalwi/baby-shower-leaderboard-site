@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-18 16:46",
-  "rounds_played": 19,
+  "updated": "2026-11-19 00:01",
+  "rounds_played": 20,
   "leaderboard": [
     {
       "name": "Sangeeta",
-      "points": 7,
+      "points": 8,
       "rounds_won": [
         1,
         2,
@@ -12,35 +12,51 @@
         9,
         10,
         12,
-        19
+        19,
+        20
       ],
       "rank": 1
     },
     {
       "name": "Dimple",
-      "points": 6,
+      "points": 7,
       "rounds_won": [
         2,
         7,
         9,
         12,
         14,
-        17
+        17,
+        20
       ],
       "rank": 2
     },
     {
       "name": "Madhu S.",
-      "points": 6,
+      "points": 7,
       "rounds_won": [
         6,
         9,
         12,
         14,
         17,
-        19
+        19,
+        20
       ],
       "rank": 2
+    },
+    {
+      "name": "Raj S.",
+      "points": 6,
+      "rounds_won": [
+        11,
+        12,
+        14,
+        15,
+        16,
+        20
+      ],
+      "rank": 4
     },
     {
       "name": "Ruta K.",
@@ -53,7 +69,7 @@
         14,
         16
       ],
-      "rank": 2
+      "rank": 4
     },
     {
       "name": "Seema K.",
@@ -66,7 +82,7 @@
         15,
         16
       ],
-      "rank": 2
+      "rank": 4
     },
     {
       "name": "Shilpa B.",
@@ -79,7 +95,7 @@
         15,
         16
       ],
-      "rank": 2
+      "rank": 4
     },
     {
       "name": "Snehal B.",
@@ -92,7 +108,44 @@
         15,
         16
       ],
-      "rank": 2
+      "rank": 4
+    },
+    {
+      "name": "Sonali",
+      "points": 6,
+      "rounds_won": [
+        1,
+        9,
+        12,
+        13,
+        14,
+        20
+      ],
+      "rank": 4
+    },
+    {
+      "name": "Anju",
+      "points": 5,
+      "rounds_won": [
+        12,
+        14,
+        17,
+        19,
+        20
+      ],
+      "rank": 10
+    },
+    {
+      "name": "Bala",
+      "points": 5,
+      "rounds_won": [
+        1,
+        7,
+        12,
+        14,
+        20
+      ],
+      "rank": 10
     },
     {
       "name": "Meena K.",
@@ -104,19 +157,7 @@
         11,
         16
       ],
-      "rank": 8
-    },
-    {
-      "name": "Raj S.",
-      "points": 5,
-      "rounds_won": [
-        11,
-        12,
-        14,
-        15,
-        16
-      ],
-      "rank": 8
+      "rank": 10
     },
     {
       "name": "Shraddha P.",
@@ -128,19 +169,7 @@
         15,
         16
       ],
-      "rank": 8
-    },
-    {
-      "name": "Sonali",
-      "points": 5,
-      "rounds_won": [
-        1,
-        9,
-        12,
-        13,
-        14
-      ],
-      "rank": 8
+      "rank": 10
     },
     {
       "name": "Vaishali",
@@ -152,29 +181,18 @@
         15,
         16
       ],
-      "rank": 8
+      "rank": 10
     },
     {
-      "name": "Anju",
+      "name": "Vibha A.",
       "points": 4,
       "rounds_won": [
-        12,
-        14,
-        17,
-        19
-      ],
-      "rank": 13
-    },
-    {
-      "name": "Bala",
-      "points": 4,
-      "rounds_won": [
-        1,
         7,
-        12,
-        14
+        17,
+        19,
+        20
       ],
-      "rank": 13
+      "rank": 15
     },
     {
       "name": "Deo",
@@ -184,7 +202,7 @@
         15,
         16
       ],
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "Hemant",
@@ -194,7 +212,7 @@
         13,
         16
       ],
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "Medha G.",
@@ -204,7 +222,7 @@
         10,
         11
       ],
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "Shefali",
@@ -214,7 +232,7 @@
         12,
         17
       ],
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "Varsha K.",
@@ -224,17 +242,7 @@
         11,
         16
       ],
-      "rank": 15
-    },
-    {
-      "name": "Vibha A.",
-      "points": 3,
-      "rounds_won": [
-        7,
-        17,
-        19
-      ],
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "Arpita",
@@ -595,6 +603,22 @@
     },
     {
       "id": 20,
+      "date": "Nov 18",
+      "status": "closed",
+      "winners": [
+        "Sonali",
+        "Madhu S.",
+        "Vibha A.",
+        "Raj S.",
+        "Dimple",
+        "Anju",
+        "Bala",
+        "Sangeeta"
+      ],
+      "answer": "Shefali"
+    },
+    {
+      "id": 21,
       "date": "Nov 18",
       "status": "open",
       "winners": [],
