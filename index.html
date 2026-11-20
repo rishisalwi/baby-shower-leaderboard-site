@@ -105,6 +105,14 @@
   .chip.hit { background: var(--gold); border-color: var(--gold-deep); }
   .place.p1 .chip { font-size: 1.1rem; padding: 4px 16px; border-color: #ffe27a; }
   .none { text-align: center; padding: 14px 0 4px; }
+  /* champion treatment once the game is over */
+  .place.p1.champion { border-color: var(--gold-deep); box-shadow: 0 0 0 4px rgba(255,216,77,.35), var(--shadow); cursor: pointer; }
+  .place.p1.champion .ttl { color: #8a5a00; }
+  .celebrate { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; border: 0; cursor: pointer; font: inherit; font-family: var(--font-display); font-weight: 600; font-size: .95rem; color: #7a5600; background: linear-gradient(180deg, #ffe680, var(--gold)); border-radius: 999px; padding: 6px 16px; box-shadow: inset 0 -3px 0 rgba(160,110,0,.25); }
+  .celebrate:active { transform: translateY(1px); }
+  .confetti-layer { position: fixed; inset: 0; pointer-events: none; z-index: 50; overflow: hidden; }
+  .confetti-layer i { position: absolute; top: -20px; display: block; will-change: transform, opacity; }
+  @media (prefers-reduced-motion: reduce) { .confetti-layer { display: none; } }
 
   /* ---------- rounds ---------- */
   details summary { cursor: pointer; list-style: none; font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
@@ -257,6 +265,33 @@
   }
   const plural = (n, w) => n + ' ' + w + (n === 1 ? '' : 's');
 
+  // Confetti: pieces fall from the top of the screen with a sideways drift and spin, then clean themselves up.
+  function confettiBurst(count) {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const layer = el('div', 'confetti-layer');
+    document.body.appendChild(layer);
+    const colors = ['#ffd84d', '#ff8fb1', '#6fc3e3', '#9be7a8', '#ff9a3c', '#ffffff', '#b79cff'];
+    const h = window.innerHeight;
+    let done = 0;
+    for (let i = 0; i < count; i++) {
+      const p = document.createElement('i');
+      const w = 6 + Math.random() * 8;
+      const round = Math.random() < 0.3;
+      p.style.cssText = 'left:' + (Math.random() * 100) + '%;width:' + w + 'px;height:' + (round ? w : w * 1.6) +
+        'px;background:' + colors[i % colors.length] + ';border-radius:' + (round ? '50%' : '2px');
+      layer.appendChild(p);
+      const dx = (Math.random() - 0.5) * 220;
+      const dur = 2800 + Math.random() * 2600;
+      const spin = (Math.random() < 0.5 ? -1 : 1) * (360 + Math.random() * 720);
+      const anim = p.animate([
+        { transform: 'translate(0,0) rotate(0deg)', opacity: 1 },
+        { transform: 'translate(' + (dx * 0.5) + 'px,' + (h * 0.55) + 'px) rotate(' + (spin * 0.5) + 'deg)', opacity: 1, offset: 0.6 },
+        { transform: 'translate(' + dx + 'px,' + (h + 40) + 'px) rotate(' + spin + 'deg)', opacity: 0.85 }
+      ], { duration: dur, delay: Math.random() * 900, easing: 'cubic-bezier(.3,.1,.6,1)', fill: 'forwards' });
+      anim.onfinish = () => { if (++done === count) layer.remove(); };
+    }
+  }
+
   function render(d) {
     document.getElementById('meta').textContent =
       plural(d.rounds_played, 'round') + ' played · updated ' + d.updated;
@@ -265,7 +300,10 @@
     const open = d.rounds.filter(r => r.status === 'open');
     const latest = document.getElementById('latest');
     if (open.length || closed.length) {
-      latest.appendChild(el('h2', '', open.length ? "Today's round is on!" : 'Latest round'));
+      latest.appendChild(el('h2', '', open.length ? "Today's round is on!" : 'Game over! Final results'));
+      if (!open.length) {
+        latest.appendChild(el('p', 'big-note', 'Thank you for playing. Congratulations to everyone, and a big cheer for the champion below.'));
+      }
       if (open.length) {
         latest.appendChild(el('p', 'big-note',
           'Round ' + open[0].id + ' is open. Check the family chat for the picture and send in your guess before the reveal.'));
@@ -289,12 +327,14 @@
     const box = document.getElementById('tiers');
     tiers.forEach((t, i) => {
       const place = i + 1;
-      const sec = el('div', 'place' + (place <= 3 ? ' p' + place : ''));
+      const gameOver = !open.length;
+      const sec = el('div', 'place' + (place <= 3 ? ' p' + place : '') + (place === 1 && gameOver ? ' champion' : ''));
       const hd = el('div', 'place-hd');
       hd.appendChild(el('div', 'badge', ordinal(place)));
       const info = el('div', 'info');
       const tied = t.names.length > 1;
-      info.appendChild(el('div', 'ttl', place === 1 ? (tied ? 'Top guessers' : 'Top guesser') : ordinal(place) + ' place'));
+      const topLabel = gameOver ? (tied ? 'Champions' : 'Champion') : (tied ? 'Top guessers' : 'Top guesser');
+      info.appendChild(el('div', 'ttl', place === 1 ? topLabel : ordinal(place) + ' place'));
       info.appendChild(el('div', 'sub', tied ? t.names.length + ' players tied' : 'on their own'));
       hd.appendChild(info);
       hd.appendChild(el('div', 'p', t.points + (t.points === 1 ? ' pt' : ' pts')));
@@ -302,6 +342,13 @@
         const body = el('div', 'p1-body');
         body.append(chips(t.names), goose('crown', 'goose-top bob'));
         sec.append(hd, body);
+        if (gameOver) {
+          const btn = el('button', 'celebrate', 'Celebrate!');
+          btn.type = 'button';
+          btn.addEventListener('click', () => confettiBurst(110));
+          sec.appendChild(btn);
+          sec.addEventListener('click', e => { if (e.target === sec) confettiBurst(110); });
+        }
       } else {
         sec.append(hd, chips(t.names));
       }
@@ -309,6 +356,7 @@
     });
     if (!tiers.length) box.appendChild(el('p', 'none muted', 'No points yet. Waiting for the first guess!'));
     document.getElementById('boardCard').hidden = false;
+    if (!open.length && tiers.length) setTimeout(() => confettiBurst(140), 600);
 
     const rounds = document.getElementById('rounds');
     d.rounds.slice().reverse().forEach(r => {
